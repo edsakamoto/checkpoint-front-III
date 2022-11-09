@@ -78,11 +78,11 @@ describe("First exam Front III", ()=>{
                 const inputs = screen.getAllByRole("textbox")
                 const submitButton = screen.getByRole('button', {type: "submit"})
                 userEvent.type(inputs[0], "Just testing")
-                userEvent.type(inputs[1], "Digital1234")
+                userEvent.type(inputs[1], "D1gital1234")
                 userEvent.click(submitButton)
 
                 const cardText1 = await screen.findByText(/Just testing/)
-                const cardText2 = await screen.findByText(/Digital1234/)
+                const cardText2 = await screen.findByText(/Digital1234/)               
                 const errorMessage = screen.queryByText("Por favor, verifique os dados inseridos no formulário")
                 expect(cardText1).toBeInTheDocument()
                 expect(cardText2).toBeInTheDocument()

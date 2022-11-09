@@ -4,7 +4,7 @@ export function Card (props) {
   return (
     <div>
       <h3>{props.dadoTime.nome}</h3>
-      <img src={props.dadoTime.imagem}  width="100" height="100" alt="" />      
+      <img src={props.dadoTime.imagem}  width="100" height="100" alt={props.dadoTime.nome + '-escudo'} />      
     </div>
   )
 }
