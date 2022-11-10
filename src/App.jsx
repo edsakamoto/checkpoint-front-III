@@ -16,7 +16,7 @@ function App() {
         nome: 'Palmeiras',
         imagem: 'https://www.imagensempng.com.br/wp-content/uploads/2021/01/Escudo-Palmeiras-Png-1024x1024.png'
       }
-      
+
     ]
   )
 
@@ -39,11 +39,7 @@ function App() {
 
     }
 
-    if (nomeTime === '' || imagemEscudo === '') {
-
-      setFormularioErro(true)
-
-    } else if (nomeTime.trim().length <= 3) {
+    if (nomeTime === '' || imagemEscudo === '' || nomeTime.trim().length <= 3) {
 
       setFormularioErro(true)
 
@@ -76,19 +72,21 @@ function App() {
         <h1>ADICIONAR NOVO TIME</h1>
         {/* <h4>Nome do time</h4> */}
         <form>
-          <div>
-            <label htmlFor="">Nome do time</label>
-            <input id="nomeTime" type="text" value={nomeTime} onChange={evento => setNomeTime(evento.target.value)} />
-          </div>
+          <section className="containerFlex">
+            <div>
+              <label htmlFor="">Nome do time</label>
+              <input id="nomeTime" type="text" value={nomeTime} onChange={evento => setNomeTime(evento.target.value)} />
+            </div>
 
-          <div>
-            <label htmlFor="">Escudo do Time (link)</label>
-            <input id="imagemEscudo" type="text" value={imagemEscudo} onChange={evento => setImagemEscudo(evento.target.value)} />
-          </div>
+            <div>
+              <label htmlFor="">Escudo do Time (link)</label>
+              <input id="imagemEscudo" type="text" value={imagemEscudo} onChange={evento => setImagemEscudo(evento.target.value)} />
+            </div>
+          </section>
 
 
-          <button type="submit" onClick={evento => cadastrarTime(evento)}>ADICIONAR </button>
-          
+          <button class="btn btn-1" type="submit" onClick={evento => cadastrarTime(evento)}>ADICIONAR </button>
+
           {
             formularioErro ? (
               <span>Por favor, verifique os dados inseridos no formulário</span>

@@ -1,9 +1,74 @@
+*{
+    background-color: #34465D;
+    color:white
+
+}
+
 
 
 .telaPrincipal{
     width: 100%;
     max-width: 1200px;
     margin: 50px auto;
+    color: white;
+    // background-color: #21759B;    
+
+    .containerFlex{
+        display: flex;
+        flex-direction: row;            
+
+    }
+
+    .btn{
+        color:#fff;
+        cursor:pointer;
+        font-size:14px;
+        font-weight: 400;
+        line-height: 20px;
+        margin: 0 0 2em;
+        max-width: 160px;
+        position:relative;
+        text-decoration: none;
+        text-transform: uppercase;
+        width: 100%;
+    }
+
+    .btn-1{
+        color:white;
+        margin:10px auto;
+        letter-spacing: 0;
+    }
+
+    .btn-1:hover, .btn-1:active{
+        letter-spacing: 5px;
+    }
+
+    .btn-1:after, .btn-1:before{
+        backface-visibility: hidden;
+        border: 1px solid rgba(#fff,0);
+        bottom: 0px;
+        content: "";
+        display: block;
+        margin: 0 auto;
+        position: relative;
+        transition: all 280ms ease-in-out;
+        width:0;
+    }
+
+    .btn-1:after, .btn-1:before{
+
+        backface-visibility: hidden;
+        border-color: #fff;
+        transition: width 350ms ease-in-out;
+        width: 70%;
+
+    }
+
+    .btn-1:hover:before{
+        bottom: auto;
+        top: 0;
+        width: 70%;
+    }
     
 
 
